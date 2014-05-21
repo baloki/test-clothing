@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 0.9em $primaryFont;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: $black;
+}
+
+a:hover {
+    text-decoration: underline;
+}

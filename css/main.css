@@ -1,152 +1,112 @@
+/* SASS Variables and Mixins */
+/* Fonts */
+/* Colours */
+/* Box Model */
+/* Graphical Flourishes */
+/* Mixins */
+/* Sections */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 0.9em;
-}
+  margin: 0;
+  padding: 0;
+  font: 0.9em "Ubuntu", sans-serif; }
 
 a,
 a:link,
 a:visited,
 a:active {
-    text-decoration: none;
-    color: #000;
-}
+  text-decoration: none;
+  color: black; }
 
 a:hover {
-    text-decoration: underline;
-}
+  text-decoration: underline; }
 
-    /* Helper Classes */
+/* Layout Helpers */
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 2%; }
 
-    .underline {
-        text-decoration: underline;
-    }
-    .lowercase {
-        text-transform: lowercase;
-    }
+/* Font Decoration */
+.underline {
+  text-decoration: underline; }
 
-/* Header Styles */
+.lowercase {
+  text-transform: lowercase; }
 
 #header {
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-    #header a,
-    #header a:link,
-    #header a:visited,
-    #header a:active {
-        color: #fff;
-    }
-
-    #header ul {
-        padding: 0;
-        list-style-type: none;
-    }
-
-        #header ul li {
-            display: inline-block;
-            padding: 10px 20px;
-        }
-
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-transform: uppercase; }
+  #header a,
+  #header a:link,
+  #header a:visited,
+  #header a:active {
+    color: white; }
+  #header ul {
+    padding: 0;
+    list-style-type: none; }
+    #header ul li {
+      display: inline-block;
+      padding: 10px 20px; }
     #header ul.breadcrumbs {
-        text-align: right;
-    }
-
-        #header ul.breadcrumbs li:last-child {
-            background-color: #fff;
-            color: #000;
-        }
-
-            #header ul.breadcrumbs li div {
-                display: none;
-                position: absolute;
-                background-color: #fff;
-                padding: 0.5em 1.5em;
-                margin: 0.8em -6em;
-                text-align: left;
-                -webkit-box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
-                -moz-box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
-                box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
-            }
-
-            #header ul.breadcrumbs li:hover div {
-                display: block;
-            }
-
-                .login p {
-                    font-size: 1.1em;
-                }
-
-                .login input[type="text"],
-                .login input[type="password"] {
-                    background-color: #f6f6f6;
-                    border: 1px solid #000;
-                    width: 94%;
-                    padding: 3%;
-                }
-
-                .login input[type="submit"] {
-                    background-color: #000;
-                    color: #fff;
-                    border: 0;
-                    padding: 0.5em 1.5em;
-                }
-
+      text-align: right; }
+      #header ul.breadcrumbs li:last-child {
+        background-color: white;
+        color: black; }
+      #header ul.breadcrumbs li div {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        padding: 0.5em 1.5em;
+        margin: 0.8em -6em;
+        text-align: left;
+        -webkit-box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75); }
+      #header ul.breadcrumbs li:hover div {
+        display: block; }
+      #header ul.breadcrumbs .login p {
+        font-size: 1.1em; }
+      #header ul.breadcrumbs .login input[type="text"],
+      #header ul.breadcrumbs .login input[type="password"] {
+        background-color: white;
+        border: 1px solid black;
+        width: 94%;
+        padding: 3%; }
+      #header ul.breadcrumbs .login input[type="submit"] {
+        background-color: black;
+        color: white;
+        border: 0;
+        padding: 0.5em 1.5em; }
     #header ul.menu {
-        text-align: center;
-    }
-
-        #header ul.menu li {
-            display: inline-block;
-            background: transparent url("../images/keyline.png") no-repeat center right;
-        }
-
+      text-align: center; }
+      #header ul.menu li {
+        display: inline-block;
+        background: transparent url("../images/keyline.png") no-repeat center right; }
         #header ul.menu li:last-child {
-            background: none;
-        }
-
+          background: none; }
+        #header ul.menu li ul {
+          position: absolute;
+          margin: 0.6em -1.7em;
+          font-size: 0.9em;
+          text-align: left;
+          font-family: "Verdana", sans-serif;
+          text-transform: capitalize; }
+          #header ul.menu li ul li {
+            display: none; }
         #header ul.menu li:hover {
-            background: #222222;
-        }
-
-            #header ul.menu li ul {
-                position: absolute;
-                margin: 0.6em -1.7em;
-                font-size: 0.9em;
-                text-align: left;
-                font-family: "Verdana", sans-serif;
-                text-transform: capitalize;
-            }
-
-            #header ul.menu li ul li {
-                display: none;
-            }
-
-            #header ul.menu li:hover ul li,
-            #header ul.menu li:hover ul li:last-child {
-                display: block;
-                background: #222222;
-            }
-
-    #header .seperator {
-        min-height: 50px;
-        border-bottom: 1px solid #2c2c2c;
-        width: 95%;
-    }
+          background: #222222; }
+          #header ul.menu li:hover ul li,
+          #header ul.menu li:hover ul li:last-child {
+            display: block;
+            background: #222222; }
+  #header .seperator {
+    min-height: 50px;
+    border-bottom: 1px solid #222222;
+    width: 95%; }
 
 /* Content Styles */
-
 #content {
-    width: 96%;
-    background-color: red;
-}
-
-    .container {
-        max-width: 950px;
-        margin: 0 auto;
-        padding: 0 2%;
-    }
+  width: 96%;
+  background-color: red; }
