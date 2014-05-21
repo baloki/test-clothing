@@ -1,0 +1,56 @@
+#banner {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0;
+
+    img {
+        width: 100%;
+    }
+
+    img + .banner_content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 50%;
+        text-align: center;
+        font-size: 1em;
+        font-size: 1vw;
+        color: $lightGrey;
+
+        @media (min-width: 950px) {
+            font-size: 1em;
+        }
+
+        /* Silly bit of Maths to handle v-align */
+        $h1FontSize:    12em;
+        $h2FontSize:    3em;
+        margin-top: (($h1FontSize - $h2FontSize) * 1.2) * -1;
+
+        h1, h2 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2em;
+            font-family: $bannerFont;
+            font-weight: normal;
+        }
+
+        h1 {
+            font-size: $h1FontSize;
+        }
+
+        h2 {
+            font-size: $h2FontSize;
+            border-top: 1px $lightGrey dotted;
+            max-width: 70%;
+            margin: -0.4em auto 0;
+            padding-top: 0.4em;
+
+            a {
+                color: $lightGrey;
+            }
+
+        }
+
+    }
+
+}

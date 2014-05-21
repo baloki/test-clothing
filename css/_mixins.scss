@@ -5,3 +5,19 @@
      -moz-box-shadow: $shadowValues;
           box-shadow: $shadowValues;
 }
+
+@mixin text-transform($form) {
+    text-transform: $form;
+}
+
+@mixin capitalise() {
+    @include text-transform(capitalize);
+}
+
+@mixin lowercase() {
+    @include text-transform(lowercase);
+}
+
+@mixin uppercase() {
+    @include text-transform(uppercase);
+}

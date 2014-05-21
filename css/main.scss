@@ -7,10 +7,4 @@
 @import 'sections_global';
 @import 'sections_helperclasses';
 @import 'sections_header';
-
-/* Content Styles */
-
-#content {
-    width: 96%;
-    background-color: red;
-}
+@import 'sections_content';

@@ -33,6 +33,15 @@ a:hover {
 .lowercase {
   text-transform: lowercase; }
 
+.capitalise {
+  text-transform: capitalize; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.uppercase {
+  text-transform: uppercase; }
+
 #header {
   width: 100%;
   background-color: black;
@@ -63,18 +72,19 @@ a:hover {
         text-align: left;
         -webkit-box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
         -moz-box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75); }
+        box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
+        z-index: 9999; }
       #header ul.breadcrumbs li:hover div {
         display: block; }
-      #header ul.breadcrumbs .login p {
+      #header ul.breadcrumbs li .login p {
         font-size: 1.1em; }
-      #header ul.breadcrumbs .login input[type="text"],
-      #header ul.breadcrumbs .login input[type="password"] {
+      #header ul.breadcrumbs li .login input[type="text"],
+      #header ul.breadcrumbs li .login input[type="password"] {
         background-color: white;
         border: 1px solid black;
         width: 94%;
         padding: 3%; }
-      #header ul.breadcrumbs .login input[type="submit"] {
+      #header ul.breadcrumbs li .login input[type="submit"] {
         background-color: black;
         color: white;
         border: 0;
@@ -92,7 +102,8 @@ a:hover {
           font-size: 0.9em;
           text-align: left;
           font-family: "Verdana", sans-serif;
-          text-transform: capitalize; }
+          text-transform: capitalize;
+          z-index: 9999; }
           #header ul.menu li ul li {
             display: none; }
         #header ul.menu li:hover {
@@ -106,7 +117,41 @@ a:hover {
     border-bottom: 1px solid #222222;
     width: 95%; }
 
-/* Content Styles */
 #content {
-  width: 96%;
-  background-color: red; }
+  width: 96%; }
+  #content #banner {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0; }
+    #content #banner img {
+      width: 100%; }
+    #content #banner img + .banner_content {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 50%;
+      text-align: center;
+      font-size: 1em;
+      font-size: 1vw;
+      color: #949494;
+      /* Silly bit of Maths to handle v-align */
+      margin-top: -10.8em; }
+      @media (min-width: 950px) {
+        #content #banner img + .banner_content {
+          font-size: 1em; } }
+      #content #banner img + .banner_content h1, #content #banner img + .banner_content h2 {
+        margin: 0;
+        padding: 0;
+        line-height: 1.2em;
+        font-family: "bebas_neueregular", sans-serif;
+        font-weight: normal; }
+      #content #banner img + .banner_content h1 {
+        font-size: 12em; }
+      #content #banner img + .banner_content h2 {
+        font-size: 3em;
+        border-top: 1px #949494 dotted;
+        max-width: 70%;
+        margin: -0.4em auto 0;
+        padding-top: 0.4em; }
+        #content #banner img + .banner_content h2 a {
+          color: #949494; }

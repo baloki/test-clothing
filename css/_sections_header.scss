@@ -2,7 +2,7 @@
     width: 100%;
     background-color: $black;
     color: $white;
-    text-transform: uppercase;
+    @include uppercase();
 
     a,
     a:link,
@@ -23,43 +23,48 @@
         &.breadcrumbs {
             text-align: right;
 
-            li:last-child {
-                background-color: $white;
-                color: $black;
-            }
+            li {
 
-            li div {
-                display: none;
-                position: absolute;
-                background-color: #fff;
-                padding: 0.5em 1.5em;
-                margin: 0.8em -6em;
-                text-align: left;
-                @include box-shadow($boxShadow_90Deg);
-            }
-
-            li:hover div {
-                display: block;
-            }
-
-                .login p {
-                    font-size: 1.1em;
-                }
-
-                .login input[type="text"],
-                .login input[type="password"] {
+                &:last-child {
                     background-color: $white;
-                    border: 1px solid $black;
-                    width: 94%;
-                    padding: 3%;
+                    color: $black;
                 }
 
-                .login input[type="submit"] {
-                    background-color: $black;
-                    color: $white;
-                    border: 0;
+                div {
+                    display: none;
+                    position: absolute;
+                    background-color: #fff;
                     padding: 0.5em 1.5em;
+                    margin: 0.8em -6em;
+                    text-align: left;
+                    @include box-shadow($boxShadow_90Deg);
+                    z-index: 9999;
                 }
+
+                &:hover div {
+                    display: block;
+                }
+
+                    .login p {
+                        font-size: 1.1em;
+                    }
+
+                    .login input[type="text"],
+                    .login input[type="password"] {
+                        background-color: $white;
+                        border: 1px solid $black;
+                        width: 94%;
+                        padding: 3%;
+                    }
+
+                    .login input[type="submit"] {
+                        background-color: $black;
+                        color: $white;
+                        border: 0;
+                        padding: 0.5em 1.5em;
+                    }
+
+            }
 
         }
 
@@ -80,7 +85,8 @@
                     font-size: 0.9em;
                     text-align: left;
                     font-family: $secondaryFont;
-                    text-transform: capitalize;
+                    @include capitalise();
+                    z-index: 9999;
 
                     li {
                         display: none;

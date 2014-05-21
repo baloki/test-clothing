@@ -15,3 +15,15 @@
 .lowercase {
     text-transform: lowercase;
 }
+
+.capitalise {
+    @include capitalise();
+}
+
+.lowercase {
+    @include lowercase();
+}
+
+.uppercase {
+    @include uppercase();
+}
