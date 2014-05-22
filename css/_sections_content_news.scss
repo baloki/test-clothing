@@ -1,0 +1,39 @@
+.newsSpot {
+    max-width: 31.3%;
+    margin: 1%;
+    text-align: center;
+    float: left;
+
+    @media (max-width: 765px) {
+        max-width: 48%;
+    }
+
+    @media (max-width: 450px) {
+        max-width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        font-weight: normal;
+        border-bottom: 1px dotted $black;
+        padding-bottom: 0.5em;
+    }
+
+    p {
+        font: 0.8em $secondaryFont;
+        text-align: left;
+
+        a {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+
+        }
+
+    }
+
+}

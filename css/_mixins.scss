@@ -21,3 +21,11 @@
 @mixin uppercase() {
     @include text-transform(uppercase);
 }
+
+@mixin quotationMark() {
+    font: 2em $quoteFont;
+    font-style: italic;
+    color: $whiteGrey;
+    position: relative;
+    top: 0.2em;
+}

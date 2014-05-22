@@ -21,6 +21,11 @@
             font-size: 1em;
         }
 
+        @media (max-width: 450px) {
+            font-size: 1.5vw;
+            width: 52%;
+        }
+
         /* Silly bit of Maths to handle v-align */
         $h1FontSize:    12em;
         $h2FontSize:    3em;
