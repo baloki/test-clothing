@@ -1,4 +1,4 @@
-test-carloans4u
-===============
+Clothing Site Demo
+===========================
 
-Car Loans 4 U Test
+A test demo site based on mockups for a clothing store.
